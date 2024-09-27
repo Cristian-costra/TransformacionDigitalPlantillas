@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Código C++</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+        }
+        #editor {
+            height: 400px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Editor de Código C++</h1>
+    <div id="editor"></div>
+    <button id="compileButton">Compilar y Ejecutar</button>
+    <h2>Salida:</h2>
+    <pre id="output"></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/clike/clike.min.js"></script>
+    <script>
+        const editor = CodeMirror(document.getElementById('editor'), {
+            lineNumbers: true,
+            mode: 'text/x-c++src',
+            theme: 'default',
+        });
+
+        document.getElementById('compileButton').addEventListener('click', () => {
+            const code = editor.getValue();
+            // Aquí iría la lógica para compilar y ejecutar el código C++
+            // Pero se necesita WebAssembly y un entorno adecuado.
+            document.getElementById('output').textContent = "Esta funcionalidad no está implementada sin APIs.";
+        });
+    </script>
+
+</body>
+</html>
