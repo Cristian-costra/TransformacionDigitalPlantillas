@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solucionador de Integrales</title>
+  <title>Calculadora de Derivadas</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="equation">
-      <span id="math">\\(\\int x^2 dx = \\frac{x^3}{3} + C\\)</span>
+    <div class="rule" id="rule" style="display:none;">
+      <span id="rule-text"></span>
     </div>
-    <div class="navigation">
-      <button id="prev">&#8592;</button>
-      <button id="next">&#8594;</button>
+
+    <div class="previous-equation" id="previous-equation"></div>
+    <div class="equation" id="equation" onclick="nextStep()" onkeydown="handleKey(event)">
+      <span id="math"></span>
+    </div>
+    <div class="next-equation" id="next-equation"></div>
+    
+    <div class="footer">
+      <p>Explora más derivadas e integrales!</p>
     </div>
   </div>
 
