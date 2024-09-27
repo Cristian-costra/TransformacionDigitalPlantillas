@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.equation {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.navigation button {
+  font-size: 2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navigation button:hover {
+  background-color: #0056b3;
+}
